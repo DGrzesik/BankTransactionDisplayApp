@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<?import javafx.geometry.Insets?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            minHeight="550.0" minWidth="1300"
+            fx:controller="com.banks.displayapp.ui.view.TransactionTableController">
+    <right>
+        <HBox minWidth="100" minHeight="50" alignment="TOP_CENTER">
+            <Button text="Refresh!" minWidth="100" minHeight="50" onAction="#refresh"><HBox.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </HBox.margin></Button>
+        </HBox>
+    </right>
+    <center>
+        <TableView fx:id="modelTableView" prefWidth="600">
+            <columns>
+                <TableColumn prefWidth="225" text="Account Number" fx:id="accountNumberCol" />
+                <TableColumn prefWidth="150" text="Correspondent" fx:id="correspondentCol" />
+                <TableColumn prefWidth="100" text="Date" fx:id="dateCol" />
+                <TableColumn prefWidth="150" text="Transaction Type" fx:id="transactionTypeCol" />
+                <TableColumn prefWidth="75" text="Amount" fx:id="amountCol" />
+                <TableColumn prefWidth="500" text="Description" fx:id="descriptionCol" />
+            </columns>
+        </TableView>
+    </center>
+
+</BorderPane>
